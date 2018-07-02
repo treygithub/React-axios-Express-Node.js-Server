@@ -10,16 +10,18 @@ class InstanceLoop extends Component {
       database:[],
       changeme:'',
       pushPost:{ database:''},
-      name:'',
-      gender:'',
-      height:'',
-      mass:''
+        name:'',
+        gender:'',
+        height:'',
+        mass:''
     }
 
     
     this.deletePeople = this.deletePeople.bind(this)
     this.shipMe = this.shipMe.bind(this)
     this.handleInputChange = this.handleInputChange.bind(this)
+    this.pushPost2= this.pushPost2.bind(this)
+    this.handleInputChange2 = this.handleInputChange2.bind(this)
    }
   
    componentDidMount(){
@@ -31,6 +33,20 @@ class InstanceLoop extends Component {
      })
    };
   
+   handleInputChange2(e){
+    this.setState({[e.target.name]: e.target.value})
+  }
+
+  pushPost2 = () => {
+    let {name,gender,height,mass} = this.state
+    axios.post("/api/AddPost",{name,gender,height,mass} ).then(res => {
+      this.setState({
+        pushPost:res.data
+      })
+    })
+  }
+
+
   
   deletePeople(id){
     axios.delete(`api/duces/${id}`).then(results => {
@@ -50,9 +66,6 @@ class InstanceLoop extends Component {
   handleInputChange(e){
     this.setState({update: e.target.value})
   }
-
-
-
 
 
   // pushPost = () => {
@@ -77,8 +90,6 @@ class InstanceLoop extends Component {
         <h4>Height: {e.height}</h4>
         <h4>Mass: {e.mass}</h4>
         <button  className="del-peps" onClick={()=> this.deletePeople(i)}> Delete</button>
-        <button className="btn1" onClick={()=> this.add1()}>+</button> 
-        <button className="btn2" onClick={()=> this.remove1()}>-</button>
         {/* put request  input fields below */}
         <input placeholder="Change Name" type="text" name="input" onChange={e => this.handleInputChange(e)}/>
         <button onClick={() => this.shipMe(i, this.state.update)} className="gui-Btn"> Update </button>
@@ -96,6 +107,13 @@ class InstanceLoop extends Component {
 
       <div>
         <div>{mapdatabase}</div>
+        <form>
+            <input placeholder="Create Name" type="text" name="inputName" onChange={e => this.handleInputChange2(e)}/>
+            <input placeholder="Create Gender" type="text" name="inputGender" onChange={e => this.handleInputChange2(e)}/>
+            <input placeholder="Create Height" type="text" name="inputHeight" onChange={e => this.handleInputChange2(e)}/>
+            <input placeholder="Create Mass" type="text" name="inputMass" onChange={e => this.handleInputChange2(e)}/>
+            <button onClick={(e) => this.pushPost2(e, this.state.update)} className="gui-Btn"> Post New Guy </button>
+        </form>
       </div>
     );
   }

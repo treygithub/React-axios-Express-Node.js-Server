@@ -16,7 +16,7 @@ app.delete("/api/Duces/:id", changeDir.deletePeople);
 app.put(`/api/editcharacters/:id`, changeDir.editPeople);
 
 
-//app.post("/api/AddPost", changeDir.pushPost);
+app.post("/api/AddPost", changeDir.pushPost);
 
 
 

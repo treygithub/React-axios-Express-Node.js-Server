@@ -8,7 +8,7 @@ import Nav from './components/Nav/Nav';
 import Footer from './components/Footer/Footer';
 import InstanceLoop from './components/DataComponentLoop/Component';
 import Header from "./components/Header/Header";
-//import Form from './GUI'
+// import Post from "./components/Post/Post"
 
 class App extends Component {
 
@@ -20,6 +20,7 @@ class App extends Component {
         <Nav />
         <Header />
         <InstanceLoop />
+        {/* <Post /> */}
         <Footer />
       </div>
     );

@@ -1,5 +1,3 @@
-
-
 //My require's
 const axios = require('axios');
 //My Database
@@ -17,8 +15,8 @@ axios.get('https://swapi.co/api/people').then(res =>{
   module.exports={
     getPeople,
     deletePeople,
-    editPeople
-    //pushPost
+    editPeople,
+    pushPost
   }
 
 //Delete
@@ -31,11 +29,12 @@ axios.get('https://swapi.co/api/people').then(res =>{
     res.status(200).send(database)
   }
 
-// // Post
-// function pushPost(req,res){
-//   AddPost.push(req,body.fact) 
-//     res.status(200).send(AddPost)
-//   }
+// Post
+function pushPost(req,res){
+  console.log(req.body)
+  database.push(req.body.fact)
+    res.status(200).send(database)
+  }
 
 
 
