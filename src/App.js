@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import './components/DataComponentLoop/Component.css'
 import './components/Loader/Loader.css';
 import './components/Nav/Nav.css';
 import './components/Footer/Footer.css';

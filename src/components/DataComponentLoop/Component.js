@@ -9,11 +9,7 @@ class InstanceLoop extends Component {
     this.state={
       database:[],
       changeme:'',
-      pushPost:{ database:''},
-        name:'',
-        gender:'',
-        height:'',
-        mass:''
+      pushPost:''
     }
 
     
@@ -32,21 +28,19 @@ class InstanceLoop extends Component {
       console.log(results)
      })
    };
-  
+ 
    handleInputChange2(e){
     this.setState({[e.target.name]: e.target.value})
   }
 
   pushPost2 = () => {
-    let {name,gender,height,mass} = this.state
-    axios.post("/api/AddPost",{name,gender,height,mass} ).then(res => {
+    let {name, gender, height, mass} = this.state
+    axios.post("/api/AddPost",{database: {name, gender, height, mass}} ).then(res => {
       this.setState({
-        pushPost:res.data
+        database: res.data
       })
     })
   }
-
-
   
   deletePeople(id){
     axios.delete(`api/duces/${id}`).then(results => {
@@ -65,35 +59,24 @@ class InstanceLoop extends Component {
 
   handleInputChange(e){
     this.setState({update: e.target.value})
-  }
-
-
-  // pushPost = () => {
-  //   let {name,gender,height,mass} = this.state
-  //   axios.post("/api/AddPost",{name,gender,height,mass} ).then(res => {
-  //     this.setState({
-  //       pushPost:res.data
-  //     })
-  //   })
-  // }
-  
-  
+  } 
     
-  
     render() {
+
+      console.log(this.state.database)
   
       let mapdatabase  = this.state.database.map((e,i) => {
         return (
           <div key={i} className="container-fluid col-lg-3">
-           <h2> {e.name}</h2>
-        <h4>Gender: {e.gender}</h4>
-        <h4>Height: {e.height}</h4>
-        <h4>Mass: {e.mass}</h4>
-        <button  className="del-peps" onClick={()=> this.deletePeople(i)}> Delete</button>
-        {/* put request  input fields below */}
-        <input placeholder="Change Name" type="text" name="input" onChange={e => this.handleInputChange(e)}/>
-        <button onClick={() => this.shipMe(i, this.state.update)} className="gui-Btn"> Update </button>
-        </div>
+            <h2> {e.name}</h2>
+            <h4>Gender: {e.gender}</h4>
+            <h4>Height: {e.height}</h4>
+            <h4>Mass: {e.mass}</h4>
+            <button  className="del-peps" onClick={()=> this.deletePeople(i)}> Delete</button>
+            {/* put request  input fields below */}
+            <input placeholder="Change Name" type="text" name="input" onChange={e => this.handleInputChange(e)}/>
+            <button onClick={() => this.shipMe(i, this.state.update)} className="gui-Btn"> Update </button>
+         </div>
         )
       })
     
@@ -108,11 +91,11 @@ class InstanceLoop extends Component {
       <div>
         <div>{mapdatabase}</div>
         <form>
-            <input placeholder="Create Name" type="text" name="inputName" onChange={e => this.handleInputChange2(e)}/>
-            <input placeholder="Create Gender" type="text" name="inputGender" onChange={e => this.handleInputChange2(e)}/>
-            <input placeholder="Create Height" type="text" name="inputHeight" onChange={e => this.handleInputChange2(e)}/>
-            <input placeholder="Create Mass" type="text" name="inputMass" onChange={e => this.handleInputChange2(e)}/>
-            <button onClick={(e) => this.pushPost2(e, this.state.update)} className="gui-Btn"> Post New Guy </button>
+            <input className="form-field-create" placeholder="Create Name" type="text" name="name" onChange={e => this.handleInputChange2(e)}/>
+            <input className="form-field-create" placeholder="Create Gender" type="text" name="gender" onChange={e => this.handleInputChange2(e)}/>
+            <input className="form-field-create" placeholder="Create Height" type="text" name="height" onChange={e => this.handleInputChange2(e)}/>
+            <input className="form-field-create" placeholder="Create Mass" type="text" name="mass" onChange={e => this.handleInputChange2(e)}/>
+            <button className="form-field-create" onClick={(e) => this.pushPost2(e, this.state.update)} className="gui-Btn"> Post New Guy </button>
         </form>
       </div>
     );

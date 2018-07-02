@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios'
-
+// page Not Being used..... Moved all functions and html / jsx too comonents.js
+// i could have used this and pased props instead of moving it...
 
 class Post extends Component {
     constructor(){
@@ -13,20 +14,12 @@ class Post extends Component {
         height:'',
         mass:''
         }
-        // this.shipMe2 = this.shipMe2.bind(this)
         this.pushPost2= this.pushPost2.bind(this)
         this.handleInputChange2 = this.handleInputChange2.bind(this)
     }
     handleInputChange2(e){
         this.setState({[e.target.name]: e.target.value})
       }
-
-    // shipMe2(id,name){
-    //     axios.put(`/api/postcharacters/${id}`,{name}).then(results => {
-    //       this.setState({ database:results.data })
-    //     })
-    //   }
-
 
     pushPost2 = () => {
     let {name,gender,height,mass} = this.state

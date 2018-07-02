@@ -2,6 +2,7 @@
 const axios = require('axios');
 //My Database
 let database = [];
+let repo = 0;
 
 //Get
 axios.get('https://swapi.co/api/people').then(res =>{
@@ -31,8 +32,9 @@ axios.get('https://swapi.co/api/people').then(res =>{
 
 // Post
 function pushPost(req,res){
-  console.log(req.body)
-  database.push(req.body.fact)
+  // console.log(req.body)
+  database.push(req.body.database)
+  console.log(database)
     res.status(200).send(database)
   }
 
