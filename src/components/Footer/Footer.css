@@ -1,0 +1,16 @@
+footer{
+    padding:10px;
+    margin: auto;
+    color:#ffffff;
+    background-color:rgb(192, 192, 192);
+    text-align: center;
+    height: 130px;
+    display: flex;
+    width: 100%;
+    font-size: 2rem;
+  }
+  p{
+    text-align: center;
+    margin: auto;
+  }
+  

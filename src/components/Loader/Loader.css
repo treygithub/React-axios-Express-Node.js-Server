@@ -1,0 +1,305 @@
+.container{
+    display:flex;
+}
+
+	/*Created by NewJack Web Dev*/
+body {
+    margin:0;
+    padding:0;
+}
+
+#box1{
+    margin-left:100px;
+    margin-top:100px;
+
+}
+#loader{
+    width:150px;
+    height:150px;
+    border-radius:100%;
+    border-top:red 3px solid;
+    border-bottom:blue 3px solid;
+    animation:spin 2s linear 5;
+}
+@keyframes spin{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
+
+#box2{
+    padding:0;
+    padding-top:50px; 
+    list-style-type:none;
+    margin: auto;
+}
+
+li{
+    display:inline-block;
+    color:red;
+    font-size:20px;
+    
+}
+
+#loader2{
+    width:100px;
+    height:100px;
+    border-radius:100%;
+    border-top:blue 3px solid;
+    border-bottom:red 3px solid;
+    animation:spin2 1s linear 5;
+    display:block;
+    position:relative;
+    margin:auto;
+}
+@keyframes spin2{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
+
+@keyframes cc {
+    0%   {color: rgb(192, 36, 36);}
+    25%  {color: rgb(168, 25, 121);}
+    50%  {color: rgb(88, 88, 158);}
+    100% {color: rgb(62, 201, 62);}
+}
+
+
+#cc {
+    
+    animation-name: cc;
+    animation-duration: 4s;
+    font-size: 3rem;
+}
+@keyframes cc1 {
+    0%   {color: rgb(104, 30, 30);}
+    25%  {color: rgb(168, 25, 121);}
+    50%  {color: rgb(34, 34, 233);}
+    100% {color: rgb(37, 97, 37);}
+}
+
+
+#cc1 {
+    
+    animation-name: cc;
+    animation-duration: 5s;
+    font-size: 3rem;
+}
+@keyframes cc2 {
+    0%   {color: rgb(107, 18, 18);}
+    25%  {color: rgb(122, 29, 91);}
+    50%  {color: rgb(4, 4, 66);}
+    100% {color: rgb(31, 85, 31);}
+}
+
+
+#cc2 {
+    
+    animation-name: cc;
+    animation-duration: 5.5s;
+    font-size: 3rem;
+}
+@keyframes cc3 {
+    0%   {color: rgb(88, 10, 10);}
+    25%  {color: rgb(87, 19, 64);}
+    50%  {color: rgb(39, 39, 82);}
+    100% {color: rgb(10, 56, 10);}
+}
+
+
+#cc3 {
+    font-size: 3rem;
+    animation-name: cc;
+    animation-duration: 6.5s;
+}
+@keyframes cc4 {
+    0%   {color: rgb(165, 60, 60);}
+    25%  {color: rgb(83, 30, 65);}
+    50%  {color: rgb(17, 17, 99);}
+    100% {color: rgb(17, 61, 17);}
+}
+
+
+#cc4 {
+    font-size: 3rem;
+    animation-name: cc;
+    animation-duration: 7.5s;
+}
+@keyframes cc5 {
+    0%   {color: rgb(179, 144, 144);}
+    25%  {color: rgb(161, 118, 147);}
+    50%  {color: rgb(168, 168, 212);}
+    100% {color: rgb(127, 155, 127);}
+}
+
+
+#cc5 {
+    font-size: 3rem;
+    animation-name: cc;
+    animation-duration: 8s;
+
+}
+@keyframes cc6 {
+    0%   {color: rgb(170, 135, 135);}
+    25%  {color: rgb(66, 14, 49);}
+    50%  {color: rgb(34, 34, 70);}
+    100% {color: rgb(6, 31, 6);}
+}
+
+
+#cc6 {
+    font-size: 3rem;
+    animation-name: cc;
+    animation-duration: 8.5s;
+}
+@keyframes cc7 {
+    0%   {color: rgb(104, 55, 55);}
+    25%  {color: rgb(39, 7, 28);}
+    50%  {color: rgb(10, 10, 75);}
+    100% {color: rgb(14, 63, 14);}
+}
+
+
+#cc7 {
+    font-size: 3rem;
+    animation-name: cc;
+    animation-duration: 9s;
+}
+@keyframes cc8 {
+    0%   {color: rgb(192, 36, 36);}
+    25%  {color: rgb(168, 25, 121);}
+    50%  {color: rgb(88, 88, 158);}
+    100% {color: rgb(62, 201, 62);}
+}
+
+
+#cc8 {
+    font-size: 3rem;
+    animation-name: cc;
+    animation-duration: 9.5s;
+}
+@keyframes cc9 {
+    0%   {color: rgb(192, 36, 36);}
+    25%  {color: rgb(168, 25, 121);}
+    50%  {color: rgb(88, 88, 158);}
+    100% {color: rgb(62, 201, 62);}
+}
+
+
+#cc9 {
+    font-size: 3rem;
+    animation-name: cc;
+    animation-duration: 10s;
+}
+@keyframes cc10 {
+    0%   {color: rgb(192, 36, 36);}
+    25%  {color: rgb(168, 25, 121);}
+    50%  {color: rgb(88, 88, 158);}
+    100% {color: rgb(62, 201, 62);}
+}
+
+
+#cc10 {
+    font-size: 3rem;
+    animation-name: cc;
+    animation-duration: 10s;
+}
+
+
+
+
+
+@keyframes cc1 {
+    0%   {color: rgb(192, 36, 36);}
+    25%  {color: rgb(168, 25, 121);}
+    50%  {color: rgb(88, 88, 158);}
+    100% {color: rgb(62, 201, 62);}
+}
+
+
+#cc1 {
+    
+    animation-name: cc;
+    animation-duration: 4s;
+    font-size: 3rem;
+}
+@keyframes cc11 {
+    0%   {color: rgb(104, 30, 30);}
+    25%  {color: rgb(168, 25, 121);}
+    50%  {color: rgb(34, 34, 233);}
+    100% {color: rgb(37, 97, 37);}
+}
+
+
+#cc11 {
+    
+    animation-name: cc;
+    animation-duration: 5s;
+    font-size: 3rem;
+}
+@keyframes cc21 {
+    0%   {color: rgb(107, 18, 18);}
+    25%  {color: rgb(122, 29, 91);}
+    50%  {color: rgb(4, 4, 66);}
+    100% {color: rgb(31, 85, 31);}
+}
+
+
+#cc21 {
+    
+    animation-name: cc;
+    animation-duration: 6s;
+    font-size: 3rem;
+}
+@keyframes cc31 {
+    0%   {color: rgb(88, 10, 10);}
+    25%  {color: rgb(87, 19, 64);}
+    50%  {color: rgb(39, 39, 82);}
+    100% {color: rgb(10, 56, 10);}
+}
+
+
+#cc31 {
+    font-size: 3rem;
+    animation-name: cc;
+    animation-duration: 7s;
+}
+@keyframes cc41 {
+    0%   {color: rgb(165, 60, 60);}
+    25%  {color: rgb(83, 30, 65);}
+    50%  {color: rgb(17, 17, 99);}
+    100% {color: rgb(17, 61, 17);}
+}
+
+
+#cc41 {
+    font-size: 3rem;
+    animation-name: cc;
+    animation-duration: 8s;
+}
+@keyframes cc51 {
+    0%   {color: rgb(179, 144, 144);}
+    25%  {color: rgb(161, 118, 147);}
+    50%  {color: rgb(168, 168, 212);}
+    100% {color: rgb(127, 155, 127);}
+}
+
+
+#cc51 {
+    font-size: 3rem;
+    animation-name: cc;
+    animation-duration: 9s;
+    
+}
+@keyframes cc61 {
+    0%   {color: rgb(170, 135, 135);}
+    25%  {color: rgb(66, 14, 49);}
+    50%  {color: rgb(34, 34, 70);}
+    100% {color: rgb(6, 31, 6);}
+}
+
+
+#cc61 {
+    font-size: 3rem;
+    animation-name: cc;
+    animation-duration: 10s;
+}

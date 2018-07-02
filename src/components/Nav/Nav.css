@@ -1,0 +1,26 @@
+.btn:hover {
+    width: 320px;
+    height: 60px;
+}
+
+.item a>h3 {
+    color: black;
+}
+
+.item h3 {
+    color: black;
+}
+
+.item p {
+    color: black;
+}
+
+#navbarCollapse ul>li>a:hover {
+    background: #ddd;
+    color: black;
+}
+
+.nav,
+.navbar-nav>a>li {
+    list-style: none;
+}
